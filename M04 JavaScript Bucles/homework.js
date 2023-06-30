@@ -8,8 +8,11 @@ function obtenerMayor(x, y) {
    if (x > y){
       return x;
    }
-   else{
+   else if (y > x){
       return y;
+   }
+   else{
+      return x || y;
    }
 }
 
@@ -161,7 +164,7 @@ function operadoresLogicos(num1, num2, num3) {
       return "Hay negativos";
    }
    else if (num3 > num1 && num3 > num2){
-      num3 = num3 + 1;
+      num3 ++;
       return num3;
    }
    else if (num1 === 0 && num2 === 0 && num3 === 0){
@@ -196,11 +199,18 @@ function esVerdadero(valor) {
    // Si "valor" es verdadero retornar "Soy verdadero".
    // Caso contrario, retornar "Soy falso".
    // Tu código:
-  switch (valor){
-   case true: return "Soy verdadero";
-   break;
-   default: return "Soy falso";
-  }
+   if (valor === true){
+      return "Soy verdadero";
+   }
+   else{
+      return "Soy falso";
+   }
+
+// switch (valor){
+//  case true: return "Soy verdadero";
+//  break;
+//  default: return "Soy falso";
+//  }
 }
 
 function tieneTresDigitos(num) {
